@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overall Private Server</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .card {
+      text-align: center;
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 450px;
+      width: 100%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background: #444;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #666;
+    }
+    .hidden {
+      display: none;
+    }
+    .section {
+      margin-top: 20px;
+      text-align: left;
+    }
+    .copy-box {
+      background: #222;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 10px 0;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .copy-btn {
+      background: #555;
+      border: none;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🌌 Overall PS</h1>
+    <p>Server GTPS terbaik dengan pengalaman bermain seru dan komunitas solid.</p>
 
+    <!-- Contact Section -->
+    <a class="btn" href="https://wa.me/639097571277" target="_blank">📱 Owner Contact</a>
+    <a class="btn" href="https://chat.whatsapp.com/KNiZozpZgxp2ICfl0C9Z8X?mode=ems_copy_c" target="_blank">💬 WhatsApp Group</a>
+    <a class="btn" href="https://discord.gg/h4TsvG2EBK" target="_blank">🎮 Discord Group</a>
+
+    <!-- How To Play -->
+    <button class="btn" onclick="toggleSection('howto')">📖 How To Play</button>
+
+    <div id="howto" class="hidden">
+      <button class="btn" onclick="toggleSection('android')">📱 Android (PowerTunnel)</button>
+      <button class="btn" onclick="toggleSection('ios')">🍏 iOS (Surge)</button>
+      <button class="btn" onclick="toggleSection('pc')">💻 PC / Laptop</button>
+    </div>
+
+    <!-- Android -->
+    <div id="android" class="hidden section">
+      <h3>Android Connection (PowerTunnel)</h3>
+      <div class="copy-box">
+        <span>https://skyhosting.lol/ptunnel.txt</span>
+        <button class="copy-btn" onclick="copyText('https://skyhosting.lol/ptunnel.txt')">Copy</button>
+      </div>
+      <ol>
+        <li>Unduh PowerTunnel</li>
+        <li>Salin "URL PowerTunnel" di atas</li>
+        <li>Buka PowerTunnel Host Settings</li>
+        <li>Tempel URL, ubah "host update period" ke "on start"</li>
+        <li>Buka Growtopia dan nikmati servernya!</li>
+      </ol>
+    </div>
+
+    <!-- iOS -->
+    <div id="ios" class="hidden section">
+      <h3>iOS Connection (Surge)</h3>
+      <div class="copy-box">
+        <span>https://skyhosting.lol/105</span>
+        <button class="copy-btn" onclick="copyText('https://skyhosting.lol/105')">Copy</button>
+      </div>
+      <ol>
+        <li>Unduh Surge 5</li>
+        <li>Pilih IMPORT → Download Profile from URL</li>
+        <li>Tempel URL Surge di atas</li>
+        <li>Setup dan izinkan konfigurasi VPN</li>
+        <li>Buka Growtopia dan mainkan!</li>
+      </ol>
+    </div>
+
+    <!-- PC -->
+    <div id="pc" class="hidden section">
+      <h3>PC Connection (Hosts File)</h3>
+      <div class="copy-box">
+        <pre>
+103.42.116.171   www.growtopia1.com
+103.42.116.171   www.growtopia2.com
+        </pre>
+        <button class="copy-btn" onclick="copyText('103.42.116.171   www.growtopia1.com\n103.42.116.171   www.growtopia2.com')">Copy</button>
+      </div>
+      <ol>
+        <li>Tekan Win + R → ketik <b>C:\Windows\System32\drivers\etc</b></li>
+        <li>Buka file <b>hosts</b> dengan Notepad (Admin)</li>
+        <li>Tambahkan baris koneksi di atas</li>
+        <li>Simpan file, lalu buka Growtopia</li>
+      </ol>
+    </div>
+  </div>
+
+  <script>
+    function toggleSection(id) {
+      document.getElementById(id).classList.toggle('hidden');
+    }
+    function copyText(text) {
+      navigator.clipboard.writeText(text);
+      alert("Copied: " + text);
+    }
+  </script>
+</body>
+</html>
