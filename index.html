@@ -8,107 +8,129 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0c0c0c, #1e1e1e);
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
       color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       padding: 20px;
+      overflow-x: hidden;
     }
     .card {
-      background: rgba(25, 25, 25, 0.9);
-      padding: 30px 20px;
-      border-radius: 20px;
-      max-width: 720px;
+      text-align: center;
+      background: rgba(20, 20, 20, 0.9);
+      padding: 40px 30px;
+      border-radius: 25px;
+      max-width: 700px;
       width: 100%;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(8px);
-      animation: fadeIn 1s ease-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      box-shadow: 0 8px 40px rgba(255, 215, 0, 0.25);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1.2s ease-out;
     }
     h1 {
-      font-size: 2rem;
-      text-align: center;
+      font-size: 2.6rem;
+      margin-bottom: 15px;
       background: linear-gradient(90deg, #FFD700, #FFB400);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 12px;
+      animation: slideDown 1s ease-out;
     }
     p {
-      margin-bottom: 20px;
-      color: #ccc;
-      line-height: 1.4;
-      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      color: #ddd;
+      animation: fadeInUp 1.3s ease-out;
     }
     .btn {
-      width: 100%;
-      padding: 14px;
-      margin: 6px 0;
-      border: none;
-      border-radius: 12px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-      text-align: center;
       display: block;
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
       background: linear-gradient(135deg, #FFD700, #B8860B);
       color: #000;
-      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      border-radius: 15px;
+      font-weight: bold;
+      font-size: 1.05rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(255, 215, 0, 0.35);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1s ease-out;
     }
     .btn:hover {
-      transform: translateY(-2px) scale(1.01);
-      box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(255, 215, 0, 0.55);
     }
-    .hidden { display: none; }
+    .hidden {
+      display: none;
+    }
     .section {
+      margin-top: 25px;
       text-align: left;
-      margin-top: 15px;
-      padding: 12px;
-      border-radius: 12px;
-      background: rgba(35, 35, 35, 0.9);
+      font-size: 1rem;
+      animation: fadeIn 0.7s ease-in;
     }
-    h3 { color: #FFD700; margin-bottom: 10px; }
-    ol { padding-left: 20px; color: #ddd; }
-    ol li { margin: 6px 0; }
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      color: #FFD700;
+    }
     .copy-box {
       background: rgba(0,0,0,0.7);
-      padding: 8px;
-      border-radius: 8px;
+      padding: 12px;
+      border-radius: 10px;
+      margin: 15px 0;
+      font-size: 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 12px;
-      font-size: 0.9rem;
+      color: #FFD700;
     }
     .copy-btn {
       background: #FFD700;
       border: none;
-      padding: 5px 10px;
-      border-radius: 6px;
+      color: black;
+      padding: 8px 12px;
+      border-radius: 8px;
       cursor: pointer;
       font-weight: bold;
+      transition: background 0.3s;
     }
-    footer {
-      margin-top: 25px;
-      text-align: center;
+    .copy-btn:hover {
+      background: #e6c200;
     }
-    footer a {
-      color: #FFD700;
-      font-weight: bold;
-      text-decoration: none;
+    ol {
+      margin: 0;
+      padding-left: 20px;
     }
-    footer a:hover { color: #fff; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      p { font-size: 1rem; }
+      .btn { font-size: 0.95rem; padding: 13px; }
+    }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>👑 Overall Private Server</h1>
-    <p>Selamat datang di <b>Overall Private Server</b> — Masukan <b>OverallPS</b> di Server Name untuk Login/Register.</p>
+    <p>
+      Selamat datang di <b>Overall Private Server</b> — Masukan <b>OverallPS</b> di Server Name untuk Login/Register.
+    </p>
 
     <!-- Contact -->
     <a class="btn" href="https://wa.me/639097571277" target="_blank">📱 Owner Contact</a>
@@ -116,23 +138,30 @@
     <a class="btn" href="https://discord.gg/h4TsvG2EBK" target="_blank">🎮 Discord Group</a>
 
     <!-- How To Play -->
-    <button class="btn" onclick="show('android1')">📱 Android I (PowerTunnel)</button>
-    <button class="btn" onclick="show('android2')">📱 Android II (Hosts Go)</button>
-    <button class="btn" onclick="show('ios')">🍏 iOS (Surge)</button>
-    <button class="btn" onclick="show('pc')">💻 PC / Laptop</button>
+    <button class="btn" onclick="toggleSection('howto')">📖 How To Play</button>
+    <div id="howto" class="hidden">
+      <button class="btn" onclick="toggleSection('android1')">📱 Android I (PowerTunnel)</button>
+      <button class="btn" onclick="toggleSection('android2')">📱 Android II (Hosts Go)</button>
+      <button class="btn" onclick="toggleSection('ios')">🍏 iOS (Surge)</button>
+      <button class="btn" onclick="toggleSection('pc')">💻 PC / Laptop</button>
+    </div>
 
     <!-- Android I -->
     <div id="android1" class="hidden section">
       <h3>Android I (PowerTunnel)</h3>
       <div class="copy-box">
         <span>https://gtpshost.com/raw/OverallPS-GH</span>
-        <button class="copy-btn" onclick="copy('https://gtpshost.com/raw/OverallPS-GH')">Copy</button>
+        <button class="copy-btn" onclick="copyText('https://gtpshost.com/raw/OverallPS-GH')">Copy</button>
       </div>
       <ol>
-        <li><a href="https://sfile.mobi/9yeA3hP6fYz" target="_blank" style="color:#FFD700;">Download the Power Tunnel</a></li>
-        <li>Klik tombol PowerTunnel URL di atas untuk menyalin host URL</li>
-        <li>Buka PowerTunnel, ketuk menu (☰), lalu pilih Host Settings</li>
-        <li>Tempel URL yang disalin, lalu atur host update period menjadi "on start"</li>
+        <li>
+          <a href="https://sfile.mobi/9yeA3hP6fYz" target="_blank" style="color:#FFD700; font-weight:bold; text-decoration:none;">
+            Download the PowerTunnel
+          </a>
+        </li>
+        <li>Klik tombol <b>PowerTunnel URL</b> di atas untuk menyalin host URL.</li>
+        <li>Buka PowerTunnel, ketuk menu (☰), lalu pilih <b>Host Settings</b>.</li>
+        <li>Tempel URL yang disalin, lalu atur host update period menjadi <b>"on start"</b>.</li>
         <li>Buka Growtopia dan nikmati server pribadimu!</li>
       </ol>
     </div>
@@ -142,16 +171,20 @@
       <h3>Android II (Hosts Go)</h3>
       <div class="copy-box">
         <span>https://gtpshost.com/hostsgo/OverallPS.txt</span>
-        <button class="copy-btn" onclick="copy('https://gtpshost.com/hostsgo/OverallPS.txt')">Copy</button>
+        <button class="copy-btn" onclick="copyText('https://gtpshost.com/hostsgo/OverallPS.txt')">Copy</button>
       </div>
       <ol>
-        <li><a href="https://play.google.com/store/apps/details?id=dns.hosts.server.change" target="_blank" style="color:#FFD700;">Unduh Hosts Go</a></li>
-        <li>Pasang Hosts Go di perangkat Anda</li>
-        <li>Buka aplikasi Host GO dan pilih 'Hosts Editor'</li>
-        <li>Tap ⋮ (three dots) on the top right, then select 'Download Hosts File'</li>
-        <li>Klik tombol HOST GO URL di atas lalu tempelkan ke Hosts Go</li>
-        <li>Pilih 'Download and Apply'</li>
-        <li>Kembali dan ketuk 'START'</li>
+        <li>
+          <a href="https://play.google.com/store/apps/details?id=dns.hosts.server.change" target="_blank" style="color:#FFD700; font-weight:bold; text-decoration:none;">
+            Unduh Hosts Go
+          </a>
+        </li>
+        <li>Pasang Hosts Go di perangkat Anda.</li>
+        <li>Buka aplikasi Hosts Go dan pilih <b>'Hosts Editor'</b>.</li>
+        <li>Tap <b>⋮</b> (three dots) kanan atas → pilih <b>'Download Hosts File'</b>.</li>
+        <li>Klik tombol <b>HOST GO URL</b> di atas lalu tempelkan ke Hosts Go.</li>
+        <li>Pilih <b>'Download and Apply'</b>.</li>
+        <li>Kembali dan ketuk <b>'START'</b>.</li>
         <li>Buka Growtopia dan nikmati!</li>
       </ol>
     </div>
@@ -160,18 +193,22 @@
     <div id="ios" class="hidden section">
       <h3>iOS (Surge 5)</h3>
       <div class="copy-box">
-        <span>https://gtpshost.com/surge/OverallPS.conf</span>
-        <button class="copy-btn" onclick="copy('https://gtpshost.com/surge/OverallPS.conf')">Copy</button>
+        <span>https://gtpshost.com/ios/OverallPS-GH</span>
+        <button class="copy-btn" onclick="copyText('https://gtpshost.com/surge/OverallPS.conf')">Copy</button>
       </div>
       <ol>
-        <li><a href="https://apps.apple.com/us/app/surge-5/id1442620678" target="_blank" style="color:#FFD700;">Step 1: Download Surge 5 dari App Store</a></li>
-        <li>Step 2: Tap ikon panah di samping atau setelah "Default.conf"</li>
-        <li>Step 3: Tap pada "Default"</li>
-        <li>Step 4: Copy Text dengan klik tombol COPY</li>
-        <li>Step 5: Paste teks tersebut</li>
-        <li>Step 6: Tekan "Done"</li>
-        <li>Step 7: (Opsional) Tap "Rename" dan beri nama "GGTPS" agar mudah diingat</li>
-        <li>Step 8: Klik "Setup" dan izinkan semua yang diminta</li>
+        <li>
+          <a href="https://apps.apple.com/us/app/surge-5/id1442620678" target="_blank" style="color:#FFD700; font-weight:bold; text-decoration:none;">
+            Step 1: Download Surge 5 dari App Store
+          </a>
+        </li>
+        <li>Step 2: Tap ikon panah di samping atau setelah <b>"Default.conf"</b>.</li>
+        <li>Step 3: Tap pada <b>"Default"</b>.</li>
+        <li>Step 4: Copy Text dengan klik tombol <b>COPY</b>.</li>
+        <li>Step 5: Paste teks tersebut.</li>
+        <li>Step 6: Tekan <b>"Done"</b>.</li>
+        <li>Step 7: (Opsional) Tap <b>"Rename"</b> dan beri nama <b>"GGTPS"</b> agar mudah diingat.</li>
+        <li>Step 8: Klik <b>"Setup"</b> dan izinkan semua yang diminta.</li>
         <li>Step 9: Boom! Sekarang kamu bisa main GTPS di iOS!</li>
       </ol>
     </div>
@@ -179,33 +216,34 @@
     <!-- PC / Laptop -->
     <div id="pc" class="hidden section">
       <h3>PC / Laptop (Hosts File)</h3>
-      <div class="copy-box" style="flex-direction: column; align-items: flex-start;">
-        <span>15.235.166.218 www.growtopia1.com<br>15.235.166.218 www.growtopia2.com</span>
-        <button class="copy-btn" onclick="copy('15.235.166.218 www.growtopia1.com\n15.235.166.218 www.growtopia2.com')">Copy</button>
+      <div class="copy-box">
+        <span>15.235.166.218 www.growtopia1.com<br>
+15.235.166.218 www.growtopia2.com</span>
+        <button class="copy-btn" onclick="copyText('15.235.166.218 www.growtopia1.com\n15.235.166.218 www.growtopia2.com')">Copy</button>
       </div>
       <ol>
-        <li>Tekan ⊞ Win + R untuk membuka jendela Run</li>
-        <li>Ketik C:\Windows\System32\drivers\etc lalu tekan Enter</li>
-        <li>Cari dan klik kanan file hosts</li>
-        <li>Buka dengan Notepad (jalankan sebagai Administrator jika perlu)</li>
-        <li>Tambahkan IP & DOMAIN ke bagian bawah file hosts</li>
+        <li>Tekan <b>⊞ Win + R</b> untuk membuka jendela Run.</li>
+        <li>Ketik <code>C:\Windows\System32\drivers\etc</code> lalu tekan <b>Enter</b>.</li>
+        <li>Cari dan klik kanan file <b>hosts</b>.</li>
+        <li>Buka dengan <b>Notepad</b> (jalankan sebagai Administrator jika perlu).</li>
+        <li>Tambahkan <b>IP & DOMAIN</b> ke bagian bawah file hosts.</li>
         <li>Simpan file lalu buka Growtopia untuk terhubung!</li>
       </ol>
     </div>
 
-    <footer>
-      <a href="https://www.youtube.com/@calvyn9668" target="_blank">CalvynGTPS</a>
-    </footer>
+    <!-- Footer -->
+    <p style="margin-top:30px; font-size:1rem; color:#FFD700;">
+      <a href="https://www.youtube.com/@calvyn9668" target="_blank" style="color:#FFD700; font-weight:bold; text-decoration:none;">
+        CalvynGTPS
+      </a>
+    </p>
   </div>
 
   <script>
-    function show(id) {
-      ['android1','android2','ios','pc'].forEach(s => {
-        document.getElementById(s).classList.add('hidden');
-      });
-      document.getElementById(id).classList.remove('hidden');
+    function toggleSection(id) {
+      document.getElementById(id).classList.toggle('hidden');
     }
-    function copy(text) {
+    function copyText(text) {
       navigator.clipboard.writeText(text);
       alert("Copied: " + text);
     }
