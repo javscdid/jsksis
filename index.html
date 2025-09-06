@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Overall Private Server</title>
   <style>
     body {
@@ -24,34 +24,32 @@
       width: 100%;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
       backdrop-filter: blur(8px);
-      animation: cardFade 1s ease-out;
+      animation: fadeIn 1s ease-out;
     }
-    @keyframes cardFade {
+    @keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     h1 {
       font-size: 2.6rem;
       background: linear-gradient(90deg, #FFD700, #FFB400);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: shine 3s infinite linear;
+      animation: shine 4s linear infinite;
       background-size: 200% auto;
       margin-bottom: 12px;
+      text-align: center;
     }
-
     @keyframes shine {
       to { background-position: 200% center; }
     }
-
     p {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       color: #ccc;
       line-height: 1.5;
+      text-align: center;
     }
-
-    .btn, .nav-btn {
+    .btn {
       width: 100%;
       padding: 14px;
       margin: 8px 0;
@@ -61,38 +59,29 @@
       font-weight: bold;
       cursor: pointer;
       text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
+      display: block;
+      text-align: center;
       background: linear-gradient(135deg, #FFD700, #B8860B);
       color: #000;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .btn:hover, .nav-btn:hover {
+    .btn:hover {
       transform: translateY(-3px) scale(1.02);
       box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
     }
-
-    .hidden {
-      display: none;
-    }
-
+    .hidden { display: none; }
     .section {
       text-align: left;
       margin-top: 20px;
       padding: 15px;
       border-radius: 12px;
       background: rgba(35, 35, 35, 0.9);
-      animation: sectionFade 0.5s ease-in-out;
+      animation: fadeIn 0.5s ease-in-out;
     }
-
-    @keyframes sectionFade {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
     h3 {
       color: #FFD700;
       margin-bottom: 10px;
     }
-
     .copy-box {
       background: rgba(0, 0, 0, 0.7);
       padding: 10px;
@@ -103,7 +92,6 @@
       color: #FFD700;
       margin-bottom: 12px;
     }
-
     .copy-btn {
       background: #FFD700;
       color: #000;
@@ -112,44 +100,20 @@
       border-radius: 7px;
       font-weight: bold;
       cursor: pointer;
-      transition: background 0.2s;
     }
-
-    .copy-btn:hover {
-      background: #e6c200;
-    }
-
-    ol {
-      padding-left: 18px;
-      color: #ddd;
-    }
-
-    ol li {
-      margin: 6px 0;
-    }
-
+    .copy-btn:hover { background: #e6c200; }
+    ol { padding-left: 18px; color: #ddd; }
+    ol li { margin: 6px 0; }
     footer {
-      margin-top: 30px;
+      margin-top: 25px;
       text-align: center;
-      color: #FFD700;
     }
-
     footer a {
       color: #FFD700;
       font-weight: bold;
       text-decoration: none;
-      transition: color 0.2s;
     }
-
-    footer a:hover {
-      color: #fff;
-    }
-
-    @media (max-width: 600px) {
-      h1 { font-size: 2.2rem; }
-      .btn, .nav-btn { font-size: 0.95rem; padding: 12px; }
-      .section { padding: 12px; }
-    }
+    footer a:hover { color: #fff; }
   </style>
 </head>
 <body>
@@ -162,11 +126,11 @@
     <a class="btn" href="https://chat.whatsapp.com/KNiZozpZgxp2ICfl0C9Z8X?mode=ems_copy_c" target="_blank">💬 WhatsApp Group</a>
     <a class="btn" href="https://discord.gg/h4TsvG2EBK" target="_blank">🎮 Discord Group</a>
 
-    <!-- How To Play Navigation -->
-    <button class="nav-btn" onclick="toggle('android1')">📱 Android I (PowerTunnel)</button>
-    <button class="nav-btn" onclick="toggle('android2')">📱 Android II (Hosts Go)</button>
-    <button class="nav-btn" onclick="toggle('ios')">🍏 iOS (Surge)</button>
-    <button class="nav-btn" onclick="toggle('pc')">💻 PC / Laptop</button>
+    <!-- How To Play Buttons -->
+    <button class="btn" onclick="show('android1')">📱 Android I (PowerTunnel)</button>
+    <button class="btn" onclick="show('android2')">📱 Android II (Hosts Go)</button>
+    <button class="btn" onclick="show('ios')">🍏 iOS (Surge)</button>
+    <button class="btn" onclick="show('pc')">💻 PC / Laptop</button>
 
     <!-- Android I -->
     <div id="android1" class="hidden section">
@@ -176,7 +140,7 @@
         <button class="copy-btn" onclick="copy('https://gtpshost.com/raw/OverallPS-GH')">Copy</button>
       </div>
       <ol>
-        <li><a href="https://sfile.mobi/9yeA3hP6fYz" target="_blank" style="color:#FFD700; text-decoration:none;">Download the Power Tunnel</a></li>
+        <li><a href="https://sfile.mobi/9yeA3hP6fYz" target="_blank" style="color:#FFD700;">Download the Power Tunnel</a></li>
         <li>Klik tombol PowerTunnel URL di atas untuk menyalin host URL</li>
         <li>Buka PowerTunnel, ketuk menu (☰), lalu pilih Host Settings</li>
         <li>Tempel URL yang disalin, lalu atur host update period menjadi "on start"</li>
@@ -192,7 +156,7 @@
         <button class="copy-btn" onclick="copy('https://gtpshost.com/hostsgo/OverallPS.txt')">Copy</button>
       </div>
       <ol>
-        <li><a href="https://play.google.com/store/apps/details?id=dns.hosts.server.change" target="_blank" style="color:#FFD700; text-decoration:none;">Unduh Hosts Go</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=dns.hosts.server.change" target="_blank" style="color:#FFD700;">Unduh Hosts Go</a></li>
         <li>Pasang Hosts Go di perangkat Anda</li>
         <li>Buka aplikasi Host GO dan pilih 'Hosts Editor'</li>
         <li>Tap ⋮ (three dots) on the top right, then select 'Download Hosts File'</li>
@@ -211,7 +175,7 @@
         <button class="copy-btn" onclick="copy('https://gtpshost.com/surge/OverallPS.conf')">Copy</button>
       </div>
       <ol>
-        <li><a href="https://apps.apple.com/us/app/surge-5/id1442620678" target="_blank" style="color:#FFD700; text-decoration:none;">Step 1: Download Surge 5 dari App Store</a></li>
+        <li><a href="https://apps.apple.com/us/app/surge-5/id1442620678" target="_blank" style="color:#FFD700;">Step 1: Download Surge 5 dari App Store</a></li>
         <li>Step 2: Tap ikon panah di samping atau setelah "Default.conf"</li>
         <li>Step 3: Tap pada "Default"</li>
         <li>Step 4: Copy Text dengan klik tombol COPY</li>
@@ -246,9 +210,8 @@
   </div>
 
   <script>
-    function toggle(id) {
-      const sections = ['android1','android2','ios','pc'];
-      sections.forEach(s => {
+    function show(id) {
+      ['android1','android2','ios','pc'].forEach(s => {
         document.getElementById(s).classList.add('hidden');
       });
       document.getElementById(id).classList.remove('hidden');
